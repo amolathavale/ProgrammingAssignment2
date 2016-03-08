@@ -34,7 +34,7 @@ cacheSolve <- function(x, ...) {
   
   #If inversion not done already, solve the inversion and cache it for future use
   m <- x$get()
-  ix <- solve(m)
+  ix <- solve(m, ...)
   x$setinv(ix)
   
   ## Return a matrix that is the inverse of 'x'
